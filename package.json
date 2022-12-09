@@ -2,13 +2,15 @@
   "name": "mcs-sample-dev",
   "version": "1.0.0",
   "scripts": {
-    "start": "browser-sync start -s -w *",
+    "start": "run-p sass watch server",
+    "server": "browser-sync start -s -w *",
     "sass": "sass --no-source-map src:src",
     "watch": "chokidar src/**/*.scss -c \"npm run sass\""
   },
   "devDependencies": {
     "browser-sync": "^2.27.10",
     "chokidar-cli": "^3.0.0",
-    "sass": "^1.56.0"
+    "sass": "^1.56.0",
+    "npm-run-all": "^4.1.5"
   }
 }
